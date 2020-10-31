@@ -1,0 +1,271 @@
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+.blocpage {
+	background-image: linear-gradient(90deg, #75cadf, #6dbcfc);
+	font-family: "Roboto", Arial, Helvetica, sans-serif;
+}
+header {
+	background-color:white;
+	height: 90px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+.bike {
+	font-size: 30px;
+}
+.box img {
+	display: flex;
+	width: 100%;
+	height: auto;
+}
+
+.slider {
+	margin: 20px auto;
+	height: auto;
+	width: 90%;
+	position: relative;
+	border: white solid 10px;
+	
+}
+#button {
+    padding: 20px;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.next {
+    border-radius: 10px 0px 0px 10px;
+    margin-left: 93%;
+}
+
+.prew {
+    border-radius: 0 10px 10px 0;
+    margin-right: 5%;
+}
+.btnpause {
+    position: absolute;
+    right: 50%;
+	bottom: 2%;
+	color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+.titleimg1 {
+	color: white;
+	position: absolute;
+	top: 20%;
+	left: 25%;
+	z-index: 11;
+}
+.title {
+	text-align: center;
+	padding: 20px;
+}
+.title2 {
+	font-size: 30px;
+	padding: 20px;
+	text-align: center;
+}
+#availableBike {
+	height: 30px;
+	width: 100px;
+}
+.section {
+	position: relative;
+	margin: 20px;
+	width: 95%;
+	height: 700px;
+	background-color:#c1e6f0;
+	box-shadow: 0 0 2px 2px;
+}
+
+.formname {
+	position: absolute;
+	left: 51%;
+	bottom: 20px;
+	margin: 50px;
+	color: black;
+	background-color: white;
+	box-shadow: 0 0 5px 2px;
+	width: 40%;
+	height: 500px;
+}
+.results {
+	padding: 25px;
+	height: 100px;
+	font-size: 20px;
+}
+label {
+	padding: 10px;
+}
+
+#firstname {
+	margin: 40px;
+	height: 25px;
+	border-radius: 5px;
+}
+#name {
+	margin-left: 25px;
+	height: 25px;
+	border-radius: 5px;
+}
+
+#resabike {
+	padding-bottom: 20px;
+	padding-left: 10px;
+}
+.resafinal{
+	font-size: 30px;
+	padding-top: 20px;
+	padding-left: 50px;
+
+}
+.detairesa {
+	background-color: white;
+	position: relative;
+	top: -250px;
+	width: 400px;
+	height: 300px;
+}
+
+.formsign {
+	position: absolute;
+	left: 3%;
+	bottom: 70px;
+	width: 93%;
+	padding: 10px;
+	height: 605px;
+	border-radius: 5px;
+	box-shadow: #fdfdfd 3px 10px 10px 10px;
+	background-color: white;
+}
+.minuteresult {
+	position: absolute;
+	left: 20px;
+	bottom: 30px;
+	color: red;
+}
+
+
+.cancel {
+	position: absolute;
+	bottom: 20px;
+	right: 50px;
+	align-items: center;
+	height: 30px;
+	width: 100px;
+	background-color: rgb(255, 55, 55);
+	color:black;
+	border-radius: 5px;
+	box-shadow: white 1px 1px 5px
+}
+.pensign {
+	font-size: 50px;
+	padding: 20px;
+	position: absolute;
+	bottom: 50px;
+	left: 2%;
+	color: black;
+}
+.btnreset {
+	position: absolute;
+	bottom: 10px;
+	left: 60%;
+	align-items: center;
+	height: 30px;
+	width: 70px;
+	background-color: rgb(255, 255, 255);
+	color: rgb(95, 95, 95);
+	border-radius: 5px;
+	box-shadow: white 1px 1px 5px;
+}
+
+.btnform {
+	position: absolute;
+	bottom: 10px;
+	left: 80%;
+	align-items: center;
+	height: 30px;
+	width: 70px;
+	background-color: rgb(255, 255, 255);
+	color: rgb(95, 95, 95);
+	border-radius: 5px;
+	box-shadow: white 1px 1px 5px;
+}
+
+canvas {
+	background-color: white;
+	position: absolute;
+	bottom: 50px;
+	left: 20%;
+	border: 1px dashed rgb(0, 0, 0);
+	width: 200px;
+	height: 115px;
+}
+#map {
+	position: absolute;
+
+	margin: 40px;
+	height: 500px;
+	width: 50%;
+	border-radius: 10px;
+  }
+.resultapi {
+	height: 100px;
+	background-color: white;
+}
+.bikefinalresa {
+	font-size: 100px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+
+@media screen and (max-width:1300px) {
+	#map {
+		width: 400px;
+		height: 520px;
+		
+	}
+	.formname {
+		width: 42%;
+		height: 500px;
+		left: 50%;
+	}
+}
+@media screen and (max-width:850px) {
+	.section {
+		height: 1100px;
+		width: 95%;
+		margin: 15px;
+	}
+	#map {
+		width: 90%;
+		height: 420px;
+		margin: 10px;
+		left: 3%;
+	}
+	.formname {
+		left: 0;
+		width: 92%;
+		margin: 20px;
+	}
+}
+@media screen and (max-width:530px) {
+	#map {
+		width: 88%;
+		height: 350px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+}

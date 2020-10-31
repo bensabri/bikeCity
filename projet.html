@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   		crossorigin=""/>
+		<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin=""></script>
+		<link
+			rel="stylesheet"
+			href="projet.css"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+			integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+			crossorigin="anonymous"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
+		<script
+  			src="https://code.jquery.com/jquery-3.5.1.slim.js"
+  			integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM="
+  			crossorigin="anonymous"></script>
+		
+		<title>Projets 3</title>
+	</head>
+	<body class="blocpage">
+		<header>
+			<h2 class="titlenantes">Nantes Vélo  <span><i class="bike fas fa-bicycle"></i></span></h2>
+			<h3>Location de vélo interactive</h3>
+		</header>
+			<div class="slider">
+				<div class="box">
+					<img src="/images/slide1.jpg" alt="">
+				</div>
+				<i id="button" class="prew fas fa-arrow-left"></i>
+				<i id="button" class="next fas fa-arrow-right"></i>
+				<i class="btnpause fas fa-pause"></i>
+			</div>
+		<section class="section">
+			<h1 class="title2" >Cliquez sur la station de votre choix</h1>
+			<div id="map"></div>
+			<div class="formname">
+				<h1 class='title'>Détail de la station</h1>
+				<h2 class="results"></h2>
+			
+				<div class="infoUser">
+					<form>
+						<label for="name">Nom :</label>
+						<input type="text" name="firstname" id="firstname" required placeholder=" Nom" size="20"/></br>
+						<label for="name">Prénon :</label>
+						<input type="text" name="name" id="name" required placeholder=" Prénom" size="20"/>
+						<button type="submit" class="btnform">Réserver</button>
+					</form>
+					<h2 id="countDown"></h2>
+				</div>
+				<canvas id="draw" width="200" height="115"></canvas>
+				<i class="pensign fas fa-pencil-alt"></i>
+				<button class="btnreset">Reset</button>		
+			</div>
+			
+			<div class="formsign">
+				<h3 class="resafinal"><span></span></h3>
+				<i class="bikefinalresa fas fa-biking"></i>
+				<p class="minuteresult"></p>
+				<button class="cancel">Annulé</button>
+			</div>
+		</section>
+
+		<footer class="resultapi"></footer>
+		<script src="projet3.js"></script>
+	</body>
+</html>
