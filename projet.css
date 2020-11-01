@@ -26,7 +26,7 @@ header {
 .slider {
 	margin: 20px auto;
 	height: auto;
-	width: 90%;
+	width: 95%;
 	position: relative;
 	border: white solid 10px;
 	
@@ -80,23 +80,30 @@ header {
 }
 .section {
 	position: relative;
-	margin: 20px;
+	margin: 20px auto;
 	width: 95%;
 	height: 700px;
 	background-color:#c1e6f0;
-	box-shadow: 0 0 2px 2px;
+	border: white solid 10px;
 }
 
 .formname {
 	position: absolute;
-	left: 51%;
+	right: 0;
 	bottom: 20px;
 	margin: 50px;
 	color: black;
 	background-color: white;
-	box-shadow: 0 0 5px 2px;
-	width: 40%;
+	border: white solid 10px;
+	width: 545px;
 	height: 500px;
+}
+#map {
+	position: absolute;
+	bottom: 20px;
+	margin: 50px;
+	height: 500px;
+	width: 545px;
 }
 .results {
 	padding: 25px;
@@ -146,6 +153,7 @@ label {
 	border-radius: 5px;
 	box-shadow: #fdfdfd 3px 10px 10px 10px;
 	background-color: white;
+	transition: 0.5s all;
 }
 .minuteresult {
 	position: absolute;
@@ -178,7 +186,7 @@ label {
 .btnreset {
 	position: absolute;
 	bottom: 10px;
-	left: 60%;
+	right: 150px;
 	align-items: center;
 	height: 30px;
 	width: 70px;
@@ -186,12 +194,18 @@ label {
 	color: rgb(95, 95, 95);
 	border-radius: 5px;
 	box-shadow: white 1px 1px 5px;
+	transition: 0.5s all;
+}
+.btnreset:hover {
+	width: 80px;
+	background-color: hsl(130, 66%, 42%);
+	color: white;
 }
 
 .btnform {
 	position: absolute;
 	bottom: 10px;
-	left: 80%;
+	right: 50px;
 	align-items: center;
 	height: 30px;
 	width: 70px;
@@ -199,6 +213,12 @@ label {
 	color: rgb(95, 95, 95);
 	border-radius: 5px;
 	box-shadow: white 1px 1px 5px;
+	transition: 0.5s all;
+}
+.btnform:hover {
+	width: 80px;
+	background-color: hsl(130, 66%, 42%);
+	color: white;
 }
 
 canvas {
@@ -210,14 +230,6 @@ canvas {
 	width: 200px;
 	height: 115px;
 }
-#map {
-	position: absolute;
-
-	margin: 40px;
-	height: 500px;
-	width: 50%;
-	border-radius: 10px;
-  }
 .resultapi {
 	height: 100px;
 	background-color: white;
@@ -228,18 +240,36 @@ canvas {
 	left: 50%;
 	top: 50%;
 }
-
+/*
+formname {
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	margin: 50px;
+	color: black;
+	background-color: white;
+	border: white solid 10px;
+	width: 500px;
+	height: 500px;
+}
+#map {
+	position: absolute;
+	bottom: 20px;
+	margin: 50px;
+	height: 500px;
+	width: 550px;
+}*/
 
 @media screen and (max-width:1300px) {
 	#map {
-		width: 400px;
-		height: 520px;
-		
+		width: 450px;
+		height: 500px;
+		margin: 30px;
 	}
 	.formname {
-		width: 42%;
+		width: 450px;
 		height: 500px;
-		left: 50%;
+		margin: 30px;
 	}
 }
 @media screen and (max-width:850px) {

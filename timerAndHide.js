@@ -13,6 +13,7 @@ btnsend.addEventListener("click", (e) => { // eventlistener show the resasign if
 	e.preventDefault() // prevent the form to submit when click the button
 	if (resasign.style.display === "none") {
 		resasign.style.display = "inline-block";
+		//resasign.style.transition = '0.5s all';
 		map.style.display = "none";
    } 
 }) 
@@ -52,7 +53,7 @@ btnsend.addEventListener('click', uptadeCountdown = () => {
 let interval = setTimeout(uptadeCountdown, 1000) // arret du muniteur quand click sur annuler
 cancel.addEventListener('click', () => {
 	clearTimeout(interval)
-	time = 5;  // puis restaure les 20 minutes du muniteur
+	time = 1200;  // puis restaure les 20 minutes du muniteur
 })  
 function showMapTimer() { // Lorsque le minuteur arriver a 0 cette fonction réaffiche la map
 	let map = document.querySelector('#map');
