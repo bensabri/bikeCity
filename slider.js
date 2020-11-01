@@ -30,7 +30,7 @@ function nextImage() {  // function nextImage
     sliderContainer.innerHTML = `<img src=${images[i]}.jpg>`;
 }
 
-document.querySelector('body').addEventListener('keypress', (e) => { // switch right left images with arrow keyboard 
+document.querySelector('body').addEventListener('keydown', (e) => { // switch right left images with arrow keyboard 
     if(e.keyCode == 39) {
         nextImage()
     } else if (e.keyCode == 37) {

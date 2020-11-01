@@ -1,4 +1,9 @@
 //map
+let pensign = document.querySelector('.pensign');
+let results = document.querySelector(".results");
+let firstname = document.querySelector('.infoUser');
+let formname2 = document.querySelector('.formname');
+formname2.style.display = 'none';
 
 let map = L.map("map").setView([47.217, -1.550], 13);
 
@@ -9,7 +14,6 @@ L.tileLayer(
 '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
 	}
 	).addTo(map);
-
 
 // Bike available nantes api jcdecaux
 
@@ -34,13 +38,6 @@ var orangeIcon = L.icon({
     popupAnchor:  [0, -40] // point from which the popup should open relative to the iconAnchor
 });
 
-let formname2 = document.querySelector('.formname');
-formname2.style.display = 'none';
-
-let pensign = document.querySelector('.pensign');
-let results = document.querySelector(".results");
-let firstname = document.querySelector('.infoUser');
-
 const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d7b7d4946a320c591ffa19aee2bbab6049dca3";
 
 	fetch(url)
@@ -63,7 +60,7 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					firstname.style.display = "none" ;  // get the div to hide or display
 					canvas.style.display = "none";
 					pensign.style.display = "none";
-					btnreset.style.display = "none";
+					document.querySelector('.btnreset').style.display = "none";
 					})
 					
 				} else if (bike.available_bikes <= 5) {
@@ -101,3 +98,5 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 			})
 		
 		}) 
+
+		
