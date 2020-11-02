@@ -76,6 +76,7 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					firstname.style.display = "inline-block";
 					canvas.style.display = "inline-block";
 					pensign.style.display = "inline-block";
+					document.querySelector('.btnreset').style.display = "inline-block";
 				})
 					 
 
@@ -92,6 +93,7 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					firstname.style.display = "inline-block";
 					canvas.style.display = "inline-block";
 					pensign.style.display = "inline-block";
+					document.querySelector('.btnreset').style.display = "inline-block";
 				})
 				}
 				

@@ -10,7 +10,7 @@ let play = document.querySelector('.btnpause').addEventListener('click', playPau
 let sliderContainer = document.querySelector('.box');
 
 //Creation d'un tableaux images qui contient les 3 sliders
-let images = ['images/slide1', 'images/slide2', 'images/slide3'];
+let images = ['slide1', 'slide2', 'slide3'];
 let i = 0;
 
 function prevImage() {  // function prevImage
