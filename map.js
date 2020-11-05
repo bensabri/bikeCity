@@ -1,9 +1,11 @@
+window.addEventListener("load", () => {
 //map
 let pensign = document.querySelector('.pensign');
 let results = document.querySelector(".results");
-let firstname = document.querySelector('.infoUser');
-let formname2 = document.querySelector('.formname');
-formname2.style.display = 'none';
+let infoUser = document.querySelector('.infoUser');
+let formname = document.querySelector('.formname');
+let resafinal = document.querySelector('.resafinal');
+
 
 let map = L.map("map").setView([47.217, -1.550], 13);
 
@@ -54,10 +56,10 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					marker.bindPopup(`<b>Address</b> ${bike.name}`).openPopup(); // show station name on the map	
 					marker.addEventListener('click', () => { // when i click on a marker i display the bike available on the div result
 					
-					formname2.style.display = 'inline-block';	
+					formname.style.display = 'inline-block';	
 					//document.querySelector('#map').style.width = '500px';	
 					results.innerHTML = `Il n'y a plus de vélo disponible a la station :</br> ${bike.name}`;
-					firstname.style.display = "none" ;  // get the div to hide or display
+					infoUser.style.display = "none" ;  // get the div to hide or display
 					canvas.style.display = "none";
 					pensign.style.display = "none";
 					document.querySelector('.btnreset').style.display = "none";
@@ -68,15 +70,16 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					marker.bindPopup(`<b>Address</b> ${bike.name}`).openPopup(); // show station name on the map	
 			
 					marker.addEventListener('click', () => { // when i click on a marker i display the bike available on the div result
-					formname2.style.display = 'inline-block';
+					formname.style.display = 'inline-block';
 					//document.querySelector('#map').style.width = '500px';
 
 					results.innerHTML = `${bike.name} : Attention reste peu de vélo: <p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
-					firstname.style.display = "inline-block";
-					canvas.style.display = "inline-block";
+					infoUser.style.display = "inline-block";
+					//canvas.style.display = "inline-block";
 					pensign.style.display = "inline-block";
 					document.querySelector('.btnreset').style.display = "inline-block";
+	
 				})
 					 
 
@@ -84,16 +87,17 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					let marker = L.marker([bike.position.lat ,bike.position.lng], {icon: greenIcon}).addTo(map)
 					marker.bindPopup(`<b>Address</b> ${bike.name}`).openPopup(); // show station name on the map	
 					marker.addEventListener('click', () => { // when i click on a marker i display the bike available on the div result
-					formname2.style.display = 'inline-block'; 
+					formname.style.display = 'inline-block'; 
 					//document.querySelector('#map').style.width = '500px';
 				
 
 					results.innerHTML =  `${bike.name}<p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
-					firstname.style.display = "inline-block";
-					canvas.style.display = "inline-block";
+					infoUser.style.display = "inline-block";
+					//canvas.style.display = "inline-block";
 					pensign.style.display = "inline-block";
 					document.querySelector('.btnreset').style.display = "inline-block";
+					
 				})
 				}
 				
@@ -101,4 +105,4 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 		
 		}) 
 
-		
+	})	
