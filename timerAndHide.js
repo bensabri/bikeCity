@@ -5,7 +5,7 @@ let resasign = document.querySelector(".resasign");	 // Resasign show where you 
 let btnsend = document.querySelector(".btnform");	// Button reserve
 let cancel = document.querySelector('.cancel');	  // Button to cancel
 let minuteresult = document.querySelector('.minuteresult'); // display the minutes left
-let resafinal = document.querySelector('.resafinal'); // display the final result to confirm that the bike is reserved
+//let resafinal = document.querySelector('.resafinal'); // display the final result to confirm that the bike is reserved
 let mapContainer = document.querySelector('#map');
 let inputFirst = document.querySelector("#firstname");// disable input button if empty form 
 let inputSecond = document.querySelector("#name");// disable input button if empty form 
@@ -15,11 +15,13 @@ document.addEventListener('click', () => { // Hide canvas and button if empty
 	if(inputFirst.value == '') { 
 		document.querySelector('canvas').style.display = 'none';
 		document.querySelector(".btnform").style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
+		document.querySelector('.btnreset').style.display = 'none';
+		document.querySelector('.pensign').style.display = 'none';
 	} else if (inputSecond.value == '') {
 		document.querySelector('canvas').style.display = 'none';
 		document.querySelector('.btnform').style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE/////////
-	} else {
-		document.querySelector('canvas').style.display = 'inline-block'; // cette ligne fait apparaitre le canvas dans le cas ou les imput sont rempli
+		document.querySelector('.btnreset').style.display = 'none';
+		document.querySelector('.pensign').style.display = 'none';
 	}
 })
 

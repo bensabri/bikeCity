@@ -51,7 +51,11 @@ let minuteresult = document.querySelector('.minuteresult'); // display the minut
 let resafinal = document.querySelector('.resafinal'); // display the final result to confirm that the bike is reserved
 let mapContainer = document.querySelector('#map');
 
-
+ else {
+		document.querySelector('canvas').style.display = 'inline-block'; // cette ligne fait apparaitre le canvas dans le cas ou les imput sont rempli
+		document.querySelector('.btnreset').style.display = 'inline-block';
+		document.querySelector('.pensign').style.display = 'inline-block';
+	}
 
 
 //resasign.style.display = "none"; // Hide resasign by default

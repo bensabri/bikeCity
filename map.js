@@ -6,7 +6,6 @@ let infoUser = document.querySelector('.infoUser');
 let formname = document.querySelector('.formname');
 let resafinal = document.querySelector('.resafinal');
 
-
 let map = L.map("map").setView([47.217, -1.550], 13);
 
 L.tileLayer(
@@ -83,7 +82,6 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 	
 				})
 					 
-
 				} else { // to display back the info s station after clicking on a no bike available
 					let marker = L.marker([bike.position.lat ,bike.position.lng], {icon: greenIcon}).addTo(map)
 					marker.bindPopup(`<b>Address</b> ${bike.name}`).openPopup(); // show station name on the map	

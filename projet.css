@@ -11,7 +11,8 @@ header {
 	background-color: white;
 	height: 90px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
+	padding: 40px;
 	align-items: center;
 }
 .bike {
@@ -98,6 +99,14 @@ header {
 	border: white solid 10px;
 	width: 545px;
 	height: 500px;
+}
+a {
+	text-decoration: none;
+	color: black;
+}
+.logo {
+	width: 6%;
+	height: auto;
 }
 #map {
 	position: absolute;
@@ -300,7 +309,7 @@ formname {
 	}
 	
 }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 550px) {
 	.next {
 		border-radius: 10px 0px 0px 10px;
 		margin-left: 83%;
@@ -350,5 +359,8 @@ formname {
 	}
 	canvas {
 		left: 3%;
+	}
+	.minuteresult {
+		bottom: 70px;
 	}
 }
