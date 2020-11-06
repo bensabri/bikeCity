@@ -8,7 +8,7 @@
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 header {
-	background-color:white;
+	background-color: white;
 	height: 90px;
 	display: flex;
 	justify-content: space-around;
@@ -29,34 +29,34 @@ header {
 	width: 95%;
 	position: relative;
 	border: white solid 10px;
-	
 }
 #button {
-    padding: 20px;
-    border: none;
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    cursor: pointer;
+	padding: 20px;
+	border: none;
+	color: white;
+	font-size: 20px;
+	position: absolute;
+	top: 50%;
+	cursor: pointer;
 }
 
 .next {
-    border-radius: 10px 0px 0px 10px;
-    margin-left: 93%;
+	position: relative;
+	border-radius: 10px 0px 0px 10px;
+	right: 8px;
 }
 
 .prew {
-    border-radius: 0 10px 10px 0;
-    margin-right: 5%;
+	border-radius: 0 10px 10px 0;
+	margin-right: 5%;
 }
 .btnpause {
-    position: absolute;
-    right: 50%;
+	position: absolute;
+	right: 50%;
 	bottom: 2%;
 	color: white;
-    font-size: 20px;
-    cursor: pointer;
+	font-size: 20px;
+	cursor: pointer;
 }
 .titleimg1 {
 	color: white;
@@ -83,7 +83,7 @@ header {
 	margin: 20px auto;
 	width: 95%;
 	height: 700px;
-	background-color:#c1e6f0;
+	background-color: #c1e6f0;
 	border: white solid 10px;
 }
 
@@ -107,21 +107,24 @@ header {
 	width: 545px;
 }
 .results {
-	padding: 25px;
+	padding-left: 25px;
 	height: 100px;
-	font-size: 20px;
+	font-size: 17px;
 }
 label {
 	padding: 10px;
 }
 
 #firstname {
-	margin: 40px;
+	padding: 5px;
+	margin-left: 30px;
+	margin-bottom: 20px;
 	height: 25px;
 	border-radius: 5px;
 }
 #name {
-	margin-left: 25px;
+	padding: 5px;
+	margin-left: 14px;
 	height: 25px;
 	border-radius: 5px;
 }
@@ -130,7 +133,7 @@ label {
 	padding-bottom: 20px;
 	padding-left: 10px;
 }
-.resafinal{
+.resafinal {
 	font-size: 30px;
 	padding-top: 20px;
 	padding-left: 50px;
@@ -146,15 +149,12 @@ label {
 .resasign {
 	display: none;
 	position: absolute;
-	left: 3%;
-	bottom: 70px;
-	width: 93%;
+	bottom: 0;
+	width: 100%;
 	padding: 10px;
-	height: 605px;
+	height: 100%;
 	border-radius: 5px;
-	box-shadow: #fdfdfd 3px 10px 10px 10px;
 	background-color: white;
-	
 }
 .minuteresult {
 	position: absolute;
@@ -162,7 +162,6 @@ label {
 	bottom: 30px;
 	color: red;
 }
-
 
 .cancel {
 	position: absolute;
@@ -172,9 +171,9 @@ label {
 	height: 30px;
 	width: 100px;
 	background-color: rgb(255, 55, 55);
-	color:black;
+	color: black;
 	border-radius: 5px;
-	box-shadow: white 1px 1px 5px
+	box-shadow: white 1px 1px 5px;
 }
 .pensign {
 	font-size: 50px;
@@ -186,40 +185,41 @@ label {
 }
 .btnreset {
 	position: absolute;
-	bottom: 10px;
-	right: 150px;
+	bottom: 8px;
+	left: 115px;
 	align-items: center;
 	height: 30px;
 	width: 70px;
-	background-color: rgb(255, 255, 255);
-	color: rgb(95, 95, 95);
-	border-radius: 5px;
-	box-shadow: white 1px 1px 5px;
+	background-color: #c1e6f0;
+	color: black;
+	border-radius: 3px;
+	border: none;
 	transition: 0.5s all;
 }
 .btnreset:hover {
 	width: 80px;
-	background-color: hsl(130, 66%, 42%);
+	background-color: #75cadf;
 	color: white;
+	border: none;
 }
 
 .btnform {
 	display: none;
 	position: absolute;
-	bottom: 10px;
+	bottom: 8px;
 	right: 50px;
 	align-items: center;
 	height: 30px;
 	width: 70px;
-	background-color: rgb(255, 255, 255);
-	color: rgb(95, 95, 95);
-	border-radius: 5px;
-	box-shadow: white 1px 1px 5px;
+	background-color: #c1e6f0;
+	color: black;
+	border-radius: 3px;
+	border: none;
 	transition: 0.5s all;
 }
 .btnform:hover {
 	width: 80px;
-	background-color: hsl(130, 66%, 42%);
+	background-color: #75cadf;
 	color: white;
 }
 
@@ -265,7 +265,7 @@ formname {
 	width: 550px;
 }*/
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width: 1300px) {
 	#map {
 		width: 450px;
 		height: 500px;
@@ -277,7 +277,7 @@ formname {
 		margin: 30px;
 	}
 }
-@media screen and (max-width:1055px) {
+@media screen and (max-width: 1055px) {
 	#map {
 		top: 50px;
 		width: 90%;
@@ -287,12 +287,12 @@ formname {
 	}
 	.formname {
 		width: 90%;
-		height: 450px;
+		height: 500px;
 		margin: 35px;
 		left: 0;
 	}
 	.section {
-		height: 1100px;
+		height: 1150px;
 		width: 95%;
 	}
 	.title2 {
@@ -300,15 +300,55 @@ formname {
 	}
 	
 }
-@media screen and (max-width:530px) {
+@media screen and (max-width: 530px) {
+	.next {
+		border-radius: 10px 0px 0px 10px;
+		margin-left: 83%;
+	}
+	
+	.prew {
+		border-radius: 0 10px 10px 0;
+		margin-right: 5%;
+	}
+
 	#map {
-		width: 88%;
-		height: 350px;
-		margin-left: 10px;
-		margin-right: 10px;
+		top: 40px;
+		width: 85%;
+		height: 440px;
+		left: 0;
+	}
+	.formname {
+		width: 85%;
+		height: 600px;
+		left: 0;
+		bottom: 0;
+	}
+	.section {
+		height: 1200px;
+		width: 95%;
 	}
 	.title2 {
 		font-size: 22px;
 	}
+	.pensign {
+		left: 30px;
+		bottom: 170px;
+	}
+	.btnreset {
+		left: 7%;
+	}
+	.btnform {
+		right: 7%;
+	}
 
-} 
+	#firstname {
+		width: 130px;
+	}
+	#name {
+		width: 130px;
+		margin-left: 30px;
+	}
+	canvas {
+		left: 3%;
+	}
+}

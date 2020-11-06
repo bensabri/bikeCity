@@ -1,4 +1,5 @@
 // Slider //
+window.addEventListener("DOMContentLoaded", () => {
 
 //Selection des boutton next, prev, et playpause
 let nextBtn = document.querySelector('.next').addEventListener('click', nextImage)
@@ -49,3 +50,4 @@ function playPause() {
     }
 }
 
+})

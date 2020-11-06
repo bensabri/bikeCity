@@ -1,5 +1,4 @@
 // Mouse drawing 
-//let btnsend = document.querySelector(".btnform");
 let canvas = document.querySelector('#draw');
 let ctx = canvas.getContext('2d');
 

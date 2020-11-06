@@ -1,5 +1,4 @@
-
-	// Variables 
+// Variables 
 let startingMinutes = 20;
 let time = startingMinutes * 60;	
 let resasign = document.querySelector(".resasign");	 // Resasign show where you reserved your bike and the time left to pick it up
@@ -12,37 +11,20 @@ let inputFirst = document.querySelector("#firstname");// disable input button if
 let inputSecond = document.querySelector("#name");// disable input button if empty form 
 
 
-
-
-btnsend.addEventListener("click", (e) => { // eventlistener show the resasign if display none when a bike is reserved
-	e.preventDefault() // prevent the form to submit when click the button
-		resasign.style.display = "inline-block";
-		mapContainer.style.display = "none";
-
-//}
-}) 
-
-cancel.addEventListener('click', () => { // when i close the resasign and show the map back when i cancel the resa by click on cancel button
-		mapContainer.style.display = "inline-block";
-		resasign.style.display = "none";
-})
-
-
 document.addEventListener('click', () => { // Hide canvas and button if empty
 	if(inputFirst.value == '') { 
 		document.querySelector('canvas').style.display = 'none';
-		document.querySelector(".btnform").style.display = 'none';
+		document.querySelector(".btnform").style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
 	} else if (inputSecond.value == '') {
 		document.querySelector('canvas').style.display = 'none';
-		document.querySelector(".btnform").style.display = 'none';
+		document.querySelector('.btnform').style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE/////////
 	} else {
-		document.querySelector('canvas').style.display = 'inline-block';
+		document.querySelector('canvas').style.display = 'inline-block'; // cette ligne fait apparaitre le canvas dans le cas ou les imput sont rempli
 	}
 })
 
 // Create timer //
-	
-btnsend.addEventListener('click', uptadeCountdown = () => {
+btnsend.addEventListener('click', uptadeCountdown = (e) => {
 	let minutes = Math.floor(time / 60);
 	let seconds = time % 60;
 	time--;
@@ -54,6 +36,8 @@ btnsend.addEventListener('click', uptadeCountdown = () => {
 cancel.addEventListener('click', () => {
 	clearTimeout(interval)
 	time = 5;  // puis restaure les 20 minutes du muniteur
+	mapContainer.style.display = "inline-block";
+	resasign.style.display = "none";
 })  
 
 function showMapTimer() { // Lorsque le minuteur arriver a 0 cette fonction réaffiche la map
@@ -64,31 +48,8 @@ function showMapTimer() { // Lorsque le minuteur arriver a 0 cette fonction réa
 	}
 }
 showMapTimer()
+
+	e.preventDefault()	// eventlistener show the resasign and hide the map when click on btnreserve
+	resasign.style.display = "inline-block";
+	mapContainer.style.display = "none";
 })
-
-
-
-
-
-
-
-/*btnsend.addEventListener('click', hideCountDown) //hide countdown and display it by click btnsent
-	countdownEl.style.display = 'none';
-	function hideCountDown() {
-		if (countdownEl.style.display == 'block') {
-			
-			countdownEl.style.display = 'none';
-		} else {
-			countdownEl.style.display = 'block';
-		}
-	}*/
-
-// Get name to local storage
-/*function bikeResult() {
-	if(results.length > 0) {
-		btnsend.disabled = true
-	} else {
-		btnsend.disabled = false
-	}
-}
-bikeResult();*/

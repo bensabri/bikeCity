@@ -57,7 +57,6 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					marker.addEventListener('click', () => { // when i click on a marker i display the bike available on the div result
 					
 					formname.style.display = 'inline-block';	
-					//document.querySelector('#map').style.width = '500px';	
 					results.innerHTML = `Il n'y a plus de vélo disponible a la station :</br> ${bike.name}`;
 					infoUser.style.display = "none" ;  // get the div to hide or display
 					canvas.style.display = "none";
@@ -71,13 +70,15 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 			
 					marker.addEventListener('click', () => { // when i click on a marker i display the bike available on the div result
 					formname.style.display = 'inline-block';
-					//document.querySelector('#map').style.width = '500px';
-
+					
 					results.innerHTML = `${bike.name} : Attention reste peu de vélo: <p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
 					infoUser.style.display = "inline-block";
-					//canvas.style.display = "inline-block";
+					canvas.style.display = "inline-block";
 					pensign.style.display = "inline-block";
+					/*if(document.style.width < '530px') {
+						pensign.style.display = "none";
+					}*/
 					document.querySelector('.btnreset').style.display = "inline-block";
 	
 				})
@@ -90,11 +91,10 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					formname.style.display = 'inline-block'; 
 					//document.querySelector('#map').style.width = '500px';
 				
-
 					results.innerHTML =  `${bike.name}<p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
 					infoUser.style.display = "inline-block";
-					//canvas.style.display = "inline-block";
+					canvas.style.display = "inline-block";
 					pensign.style.display = "inline-block";
 					document.querySelector('.btnreset').style.display = "inline-block";
 					

@@ -23,10 +23,11 @@ window.addEventListener('load', () => {
        
     }
 })
-
-cancel.addEventListener('click', () => { // Remove timeLeft and bike and keep name an firstName for the next resa
+cancel.addEventListener('click', () => { // Remove timeLeft and bike, keep name an firstName for the next resa
     localStorage.removeItem('bike');
     localStorage.removeItem('timeLeft');
+    document.querySelector('#map').style.display = "inline-block";  // when i close the resasign and show the map back when i cancel the resa by click on cancel button
+    document.querySelector('.resasign').style.display = "none";
 })
 
 // Onload open the browser with the current resa if not cancel //
