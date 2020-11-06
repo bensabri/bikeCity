@@ -11,7 +11,7 @@ btnsend.addEventListener('click', () => { // Get the name from input and save it
 })
 
 window.addEventListener('load', () => {
-	if(localStorage.length > 2) {
+	if(localStorage.length >= 2) {
 		document.querySelector('.resasign').style.display = 'inline-block';
         document.querySelector('#map').style.display = "none";
         alert('Vous avez une réservation en cours si vous voulez l\'annulé cliquer sur le bouton en bas');

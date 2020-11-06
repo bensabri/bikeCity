@@ -37,7 +37,7 @@ btnsend.addEventListener('click', uptadeCountdown = (e) => {
 
 cancel.addEventListener('click', () => {
 	clearTimeout(interval)
-	time = 5;  // puis restaure les 20 minutes du muniteur
+	time = 1200;  // puis restaure les 20 minutes du muniteur
 	mapContainer.style.display = "inline-block";
 	resasign.style.display = "none";
 })  
