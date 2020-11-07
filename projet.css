@@ -12,7 +12,7 @@ header {
 	height: 90px;
 	display: flex;
 	justify-content: space-between;
-	padding: 40px;
+	padding: 25px;
 	align-items: center;
 }
 .bike {
@@ -104,9 +104,12 @@ a {
 	text-decoration: none;
 	color: black;
 }
+a:hover {
+	color: #75cadf;
+}
 .logo {
-	width: 6%;
-	height: auto;
+	width: 90px;
+	height: 90px;
 }
 #map {
 	position: absolute;
@@ -362,5 +365,12 @@ formname {
 	}
 	.minuteresult {
 		bottom: 70px;
+	}
+	a {
+		font-size: 15px;
+		padding: 8px;
+	}
+	.villenantes {
+		font-size: 15px;
 	}
 }
