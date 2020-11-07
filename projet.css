@@ -311,6 +311,7 @@ formname {
 		font-size: 25px;
 	}
 	
+	
 }
 @media screen and (max-width: 550px) {
 	.next {
@@ -358,7 +359,7 @@ formname {
 	}
 	#name {
 		width: 130px;
-		margin-left: 30px;
+		margin-left: 15px;
 	}
 	canvas {
 		left: 3%;
