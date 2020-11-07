@@ -1,5 +1,4 @@
 // Localstorage save information in the browser //
-
 let nom = document.querySelector('#firstname');
 let prenom = document.querySelector('#name');
 
@@ -10,7 +9,7 @@ btnsend.addEventListener('click', () => { // Get the name from input and save it
 })
 
 window.addEventListener('load', () => {
-	if(localStorage.length) {
+	if(localStorage.length > 0) {
 		//document.querySelector('.resasign').style.display = 'inline-block';
         //document.querySelector('#map').style.display = "none";
         let name = localStorage.getItem('name');
