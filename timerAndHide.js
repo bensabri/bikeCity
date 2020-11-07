@@ -2,10 +2,9 @@
 let startingMinutes = 20;
 let time = startingMinutes * 60;	
 let resasign = document.querySelector(".resasign");	 // Resasign show where you reserved your bike and the time left to pick it up
-let btnsend = document.querySelector(".btnform");	// Button reserve
+let btnsend = document.querySelector(".btnsend");	// Button reserve
 let cancel = document.querySelector('.cancel');	  // Button to cancel
 let minuteresult = document.querySelector('.minuteresult'); // display the minutes left
-//let resafinal = document.querySelector('.resafinal'); // display the final result to confirm that the bike is reserved
 let mapContainer = document.querySelector('#map');
 let inputFirst = document.querySelector("#firstname");// disable input button if empty form 
 let inputSecond = document.querySelector("#name");// disable input button if empty form 
@@ -14,12 +13,12 @@ let inputSecond = document.querySelector("#name");// disable input button if emp
 document.addEventListener('click', () => { // Hide canvas and button if empty
 	if(inputFirst.value == '') { 
 		document.querySelector('canvas').style.display = 'none';
-		document.querySelector(".btnform").style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
+		document.querySelector(".btnsend").style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
 		document.querySelector('.btnreset').style.display = 'none';
 		document.querySelector('.pensign').style.display = 'none';
 	} else if (inputSecond.value == '') {
 		document.querySelector('canvas').style.display = 'none';
-		document.querySelector('.btnform').style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE/////////
+		document.querySelector('.btnsend').style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE/////////
 		document.querySelector('.btnreset').style.display = 'none';
 		document.querySelector('.pensign').style.display = 'none';
 	}

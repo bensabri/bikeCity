@@ -2,6 +2,7 @@
 let canvas = document.querySelector('#draw');
 let ctx = canvas.getContext('2d');
 
+
 let lastX = 0;
 let lastY = 0;
 let isDrawing = false;
@@ -32,12 +33,12 @@ canvas.addEventListener('mousemove', (e) => {
 let btnreset = document.querySelector('.btnreset').addEventListener('click', () => { // function reset canvas
     ctx.setTransform(1, 0, 0, 1, 0, 0);
 	ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
-	document.querySelector(".btnform").style.display ="none";
+	document.querySelector(".btnsend").style.display ="none";
 })
 
 canvas.addEventListener('click', () => {
 	if(!isDrawing) {
-		document.querySelector(".btnform").style.display ="inline-block";
+		document.querySelector(".btnsend").style.display ="inline-block";
 	} 
 })
 

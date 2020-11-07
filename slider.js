@@ -2,16 +2,16 @@
 window.addEventListener("DOMContentLoaded", () => {
 
 //Selection des boutton next, prev, et playpause
-let nextBtn = document.querySelector('.next').addEventListener('click', nextImage)
+document.querySelector('.next').addEventListener('click', nextImage)
 
-let prevBtn = document.querySelector('.prew').addEventListener('click', prevImage)
-let play = document.querySelector('.btnpause').addEventListener('click', playPause)
+document.querySelector('.prew').addEventListener('click', prevImage)
+document.querySelector('.btnpause').addEventListener('click', playPause)
 
 //Selection de la box qui contient l'img src qui contient les images
 let sliderContainer = document.querySelector('.box');
 
 //Creation d'un tableaux images qui contient les 3 sliders
-let images = ['slide1', 'slide2', 'slide3'];
+let images = ['images/slide1', 'images/slide2', 'images/slide3'];
 let i = 0;
 
 function prevImage() {  // function prevImage
@@ -20,7 +20,7 @@ function prevImage() {  // function prevImage
     } else {
         i = 2; // I est = a la longeur du tableaux donc on reviens au debut de la boucle  i > 0 on decremente de la dernier photo a la premier
     }
-    sliderContainer.innerHTML = `<img src=${images[i]}.jpg>`;
+    sliderContainer.innerHTML = `<img src=${images[i]}.png>`;
 }
 function nextImage() {  // function nextImage
     if(i < images.length -1) {
@@ -28,7 +28,7 @@ function nextImage() {  // function nextImage
     } else {
         i = 0;
     }
-    sliderContainer.innerHTML = `<img src=${images[i]}.jpg>`;
+    sliderContainer.innerHTML = `<img src=${images[i]}.png>`;
 }
 
 document.querySelector('body').addEventListener('keydown', (e) => { // switch right left images with arrow keyboard 

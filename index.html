@@ -31,13 +31,18 @@
 	<body class="blocpage">
 		<header>
 			<img class="logo" src="images/Bike City.jpg">
-			<a href="#map">Map</a>
-			<a href="#formname">Reservation</a>
-			<h3 class="villenantes">Ville de Nantes</h3>
+			<ul class="nav">
+				<li><a href="#map">Map</a></li>
+				<li><a href="#formname">Reservation</a></li>
+			</ul>	
 		</header>
+		<div class="illustration">
+			<p class="textIllustation">City Bike vous aide a trouvé une station<br/> proche avec des vélos disponble</p>
+			<img src="images/biker.png" width="300px" alt="rider">
+		</div>
 			<div class="slider">
 				<div class="box">
-					<img src="slide1.jpg" width="900" height="600" alt="">
+					<img src="/images/slide1.png" width="1100" height="850" alt="slide1">
 				</div>
 				<i id="button" class="prew fas fa-arrow-left"></i>
 				<i id="button" class="next fas fa-arrow-right"></i>
@@ -55,7 +60,7 @@
 					<input type="text" name="firstname" id="firstname" placeholder=" Nom"/></br>
 					<label for="name">Prénon :</label>
 					<input type="text" name="name" id="name" minlength="2" placeholder=" Prénom" />
-					<button type="text" class="btnform">Réserver</button>
+					<button type="text" class="btnsend">Réserver</button>
 				</div>
 				<canvas id="draw" width="200" height="115"></canvas>
 				<i class="pensign fas fa-pencil-alt"></i>
@@ -70,6 +75,7 @@
 		</section>
 
 		<footer>
+			<a href='https://www.freepik.com/vectors/background'>Background vector created by pikisuperstar - www.freepik.com</a>
 		</footer>
 		<script src="slider.js"></script>
 		<script src="timerAndHide.js"></script>

@@ -4,16 +4,24 @@
 	box-sizing: border-box;
 }
 .blocpage {
-	background-image: linear-gradient(90deg, #75cadf, #6dbcfc);
+	background: url(images/4144946.jpg);
 	font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 header {
 	background-color: white;
 	height: 90px;
-	display: flex;
-	justify-content: space-between;
-	padding: 25px;
 	align-items: center;
+}
+.nav {
+	position: relative;
+	left: 0px;
+	display: flex;
+	justify-content: space-around;
+	margin-top: -40px;
+}
+li {
+
+	list-style-type: none;
 }
 .bike {
 	font-size: 30px;
@@ -22,14 +30,31 @@ header {
 	display: flex;
 	width: 100%;
 	height: auto;
+	border-radius: 10px;
 }
+.illustration {
+	height: 400px;
+}
+.illustration img {
+	margin: 50px 80px;
+}
+.textIllustation {
 
+	width: 650px;
+	position: absolute;
+	right: 0;
+	font-weight: 700;
+	font-size: 30px;
+	padding: 80px 50px;
+	color: white;
+}
 .slider {
-	margin: 20px auto;
+	margin: 20px;
 	height: auto;
-	width: 95%;
+	width: 40%;
 	position: relative;
-	border: white solid 10px;
+	box-shadow: #6e6464 0px 0px 10px;
+	border-radius: 20px;
 }
 #button {
 	padding: 20px;
@@ -59,6 +84,7 @@ header {
 	font-size: 20px;
 	cursor: pointer;
 }
+
 .titleimg1 {
 	color: white;
 	position: absolute;
@@ -71,6 +97,7 @@ header {
 	padding: 20px;
 }
 .title2 {
+	color: white;
 	font-size: 30px;
 	padding: 20px;
 	text-align: center;
@@ -81,11 +108,12 @@ header {
 }
 .section {
 	position: relative;
-	margin: 20px auto;
-	width: 95%;
+	margin: 50px auto;
+	border-radius: 7px;
+	width: 85%;
 	height: 700px;
-	background-color: #c1e6f0;
-	border: white solid 10px;
+	background-color: #ffffff49;
+	box-shadow: #727171a1 0px 0px 10px;
 }
 
 .formname {
@@ -96,7 +124,7 @@ header {
 	margin: 50px;
 	color: black;
 	background-color: white;
-	border: white solid 10px;
+	border-radius: 10px;
 	width: 545px;
 	height: 500px;
 }
@@ -117,6 +145,7 @@ a:hover {
 	margin: 50px;
 	height: 500px;
 	width: 545px;
+	border-radius: 10px;
 }
 .results {
 	padding-left: 25px;
@@ -215,7 +244,7 @@ label {
 	border: none;
 }
 
-.btnform {
+.btnsend {
 	display: none;
 	position: absolute;
 	bottom: 8px;
@@ -310,15 +339,16 @@ formname {
 	.title2 {
 		font-size: 25px;
 	}
-	
-	
+	.slider {
+		width: 80%;
+	}
 }
 @media screen and (max-width: 550px) {
 	.next {
 		border-radius: 10px 0px 0px 10px;
 		margin-left: 83%;
 	}
-	
+
 	.prew {
 		border-radius: 0 10px 10px 0;
 		margin-right: 5%;
@@ -331,7 +361,7 @@ formname {
 		left: 0;
 	}
 	.formname {
-		width: 85%;
+		width: 95%;
 		height: 600px;
 		left: 0;
 		bottom: 0;
@@ -360,6 +390,9 @@ formname {
 	#name {
 		width: 130px;
 		margin-left: 15px;
+	}
+	.slider {
+		width: 95%;
 	}
 	canvas {
 		left: 3%;
