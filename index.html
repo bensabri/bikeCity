@@ -32,11 +32,12 @@
 		<header>
 			<img class="logo" src="images/Bike City.jpg">
 			<ul class="nav">
+				<li><a href="#illustration">Accueil</a></li>
 				<li><a href="#map">Map</a></li>
 				<li><a href="#formname">Reservation</a></li>
 			</ul>	
 		</header>
-		<div class="illustration">
+		<div class="illustration" id="illustration">
 			<p class="textIllustation">City Bike vous aide a trouvé une station<br/> proche avec des vélos disponble</p>
 			<img src="images/biker.png" width="300px" alt="rider">
 		</div>
@@ -57,7 +58,7 @@
 			
 				<div class="infoUser">
 					<label for="firstname">Nom :</label>
-					<input type="text" name="firstname" id="firstname" placeholder=" Nom"/></br>
+					<input type="text" name="firstname" id="firstname" minlength="2" placeholder=" Nom"/></br>
 					<label for="name">Prénon :</label>
 					<input type="text" name="name" id="name" minlength="2" placeholder=" Prénom" />
 					<button type="text" class="btnsend">Réserver</button>
@@ -75,7 +76,6 @@
 		</section>
 
 		<footer>
-			<a href='https://www.freepik.com/vectors/background'>Background vector created by pikisuperstar - www.freepik.com</a>
 		</footer>
 		<script src="slider.js"></script>
 		<script src="timerAndHide.js"></script>

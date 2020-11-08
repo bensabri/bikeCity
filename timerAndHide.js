@@ -1,6 +1,6 @@
 // Variables 
-let startingMinutes = 20;
-let time = startingMinutes * 60;	
+let startingMinutes = 20; // Total minutes timer
+let time = startingMinutes * 60; // For one minutes 60 secondes	
 let resasign = document.querySelector(".resasign");	 // Resasign show where you reserved your bike and the time left to pick it up
 let btnsend = document.querySelector(".btnsend");	// Button reserve
 let cancel = document.querySelector('.cancel');	  // Button to cancel
@@ -50,7 +50,7 @@ function showMapTimer() { // Lorsque le minuteur arriver a 0 cette fonction réa
 }
 showMapTimer()
 
-	e.preventDefault()	// eventlistener show the resasign and hide the map when click on btnreserve
+	e.preventDefault()	// eventlistener show the resasign and hide the map when click on btnsend
 	resasign.style.display = "inline-block";
 	mapContainer.style.display = "none";
 })

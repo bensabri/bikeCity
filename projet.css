@@ -16,9 +16,11 @@ header {
 	position: relative;
 	left: 0px;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	margin-top: -40px;
+	color: hsl(0, 0%, 26%);
 }
+
 li {
 	list-style-type: none;
 }
@@ -32,10 +34,12 @@ li {
 	border-radius: 10px;
 }
 .illustration {
-	height: 400px;
+	position: relative;
+	height: 380px;
 }
 .illustration img {
 	margin: 50px 80px;
+	transition: 1s all;
 }
 .textIllustation {
 	width: 650px;
@@ -45,13 +49,15 @@ li {
 	font-size: 30px;
 	padding: 80px 50px;
 	color: white;
+	transition: 1s all;
 }
+
 .slider {
 	margin: auto;
 	height: auto;
 	width: 55%;
 	position: relative;
-	box-shadow: #6e6464 0px 0px 10px;
+	box-shadow: darkgray 0 0 8px ;
 	border-radius: 20px;
 }
 #button {
@@ -62,6 +68,9 @@ li {
 	position: absolute;
 	top: 50%;
 	cursor: pointer;
+}
+#button:hover {
+	color: coral;
 }
 
 .next {
@@ -82,20 +91,17 @@ li {
 	font-size: 20px;
 	cursor: pointer;
 }
-
-.titleimg1 {
-	color: white;
-	position: absolute;
-	top: 20%;
-	left: 25%;
-	z-index: 11;
+.btnpause:hover {
+	color: coral;
 }
+
 .title {
 	text-align: center;
 	padding: 20px;
+	color: black;
 }
 .title2 {
-	color: white;
+	color: black;
 	font-size: 30px;
 	padding: 20px;
 	text-align: center;
@@ -110,7 +116,7 @@ li {
 	border-radius: 7px;
 	width: 85%;
 	height: 700px;
-	background-color: #ffffff49;
+	background-color: white;
 	box-shadow: #727171a1 0px 0px 10px;
 }
 
@@ -120,11 +126,14 @@ li {
 	right: 0;
 	bottom: 20px;
 	margin: 50px;
-	color: black;
+	color: hsl(0, 0%, 26%);
 	background-color: white;
+	border: rgb(190, 190, 190) solid 1px;
 	border-radius: 10px;
-	width: 545px;
+	box-shadow: darkgray 0 0 8px ;
+	width: 520px;
 	height: 500px;
+	transition: 0.5s all;
 }
 a {
 	text-decoration: none;
@@ -142,8 +151,10 @@ a:hover {
 	bottom: 20px;
 	margin: 50px;
 	height: 500px;
-	width: 545px;
+	width: 520px;
 	border-radius: 10px;
+	box-shadow: darkgray 0 0 8px ;
+	transition: 0.5s all;
 }
 .results {
 	padding-left: 25px;
@@ -256,7 +267,7 @@ label {
 	border: none;
 	transition: 0.5s all;
 }
-.btnform:hover {
+.btnsend:hover {
 	width: 80px;
 	background-color: #75cadf;
 	color: white;
@@ -304,7 +315,7 @@ formname {
 	width: 550px;
 }*/
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1360px) {
 	#map {
 		width: 450px;
 		height: 500px;
@@ -319,7 +330,7 @@ formname {
 		width: 80%;
 	}
 }
-@media screen and (max-width: 1055px) {
+@media screen and (max-width: 1150px) {
 	#map {
 		top: 50px;
 		width: 90%;
@@ -341,10 +352,41 @@ formname {
 		font-size: 25px;
 	}
 	.slider {
-		width: 80%;
+		width: 95%;
 	}
 }
+@media screen and (max-width: 950px) {
+	.illustration img {
+		margin: 0;
+		position: absolute;
+		right: 20px;
+		bottom: 30px;
+	}
+
+	.textIllustation {
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		left: 30px;
+		top: 20px;
+		font-size: 23px;
+		width: 450px;
+	}
+	.nav {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: -75px;
+	}
+}
+
 @media screen and (max-width: 550px) {
+	.textIllustation {
+		width: auto;
+		font-size: 19px;
+		width: 390px
+	}
+
 	.next {
 		border-radius: 10px 0px 0px 10px;
 		margin-left: 83%;
@@ -362,7 +404,7 @@ formname {
 		left: 0;
 	}
 	.formname {
-		width: 95%;
+		width: 85%;
 		height: 600px;
 		left: 0;
 		bottom: 0;
@@ -375,11 +417,11 @@ formname {
 		font-size: 22px;
 	}
 	.pensign {
-		left: 30px;
+		left: 170px;
 		bottom: 170px;
 	}
 	.btnreset {
-		left: 7%;
+		left: 40%;
 	}
 	.btnform {
 		right: 7%;
@@ -396,7 +438,7 @@ formname {
 		width: 95%;
 	}
 	canvas {
-		left: 3%;
+		left: 25%;
 	}
 	.minuteresult {
 		bottom: 70px;
@@ -406,6 +448,12 @@ formname {
 		padding: 8px;
 	}
 	.villenantes {
+		font-size: 15px;
+	}
+}
+@media screen and (max-width: 400px) {
+	.textIllustation {
+		width: auto;
 		font-size: 15px;
 	}
 }
