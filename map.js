@@ -75,7 +75,7 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					results.innerHTML = `${bike.name} : Attention reste peu de vélo: <p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
 					infoUser.style.display = "inline-block";
-					canvas.style.display = "inline-block";
+					//canvas.style.display = "inline-block";
 					pensign.style.display = "inline-block";
 					reset.style.display = "inline-block";
 	
@@ -91,7 +91,7 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					results.innerHTML =  `${bike.name}<p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
 					infoUser.style.display = "inline-block";
-					canvas.style.display = "inline-block";
+					//canvas.style.display = "inline-block";
 					pensign.style.display = "inline-block";
 					reset.style.display = "inline-block";
 					

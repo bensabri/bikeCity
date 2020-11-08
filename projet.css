@@ -237,6 +237,7 @@ label {
 	color: black;
 }
 .btnreset {
+	display: none;
 	position: absolute;
 	bottom: 8px;
 	left: 115px;
