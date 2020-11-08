@@ -20,7 +20,6 @@ header {
 	margin-top: -40px;
 }
 li {
-
 	list-style-type: none;
 }
 .bike {
@@ -39,7 +38,6 @@ li {
 	margin: 50px 80px;
 }
 .textIllustation {
-
 	width: 650px;
 	position: absolute;
 	right: 0;
@@ -49,9 +47,9 @@ li {
 	color: white;
 }
 .slider {
-	margin: 20px;
+	margin: auto;
 	height: auto;
-	width: 40%;
+	width: 55%;
 	position: relative;
 	box-shadow: #6e6464 0px 0px 10px;
 	border-radius: 20px;
@@ -316,6 +314,9 @@ formname {
 		width: 450px;
 		height: 500px;
 		margin: 30px;
+	}
+		.slider {
+		width: 80%;
 	}
 }
 @media screen and (max-width: 1055px) {

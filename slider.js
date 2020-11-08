@@ -20,7 +20,7 @@ function prevImage() {  // function prevImage
     } else {
         i = 2; // I est = a la longeur du tableaux donc on reviens au debut de la boucle  i > 0 on decremente de la dernier photo a la premier
     }
-    sliderContainer.innerHTML = `<img src=${images[i]}.png>`;
+    sliderContainer.innerHTML = `<img src=${images[i]}.jpg>`;
 }
 function nextImage() {  // function nextImage
     if(i < images.length -1) {
@@ -28,7 +28,7 @@ function nextImage() {  // function nextImage
     } else {
         i = 0;
     }
-    sliderContainer.innerHTML = `<img src=${images[i]}.png>`;
+    sliderContainer.innerHTML = `<img src=${images[i]}.jpg>`;
 }
 
 document.querySelector('body').addEventListener('keydown', (e) => { // switch right left images with arrow keyboard 
