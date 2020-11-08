@@ -6,11 +6,10 @@ let btnsend = document.querySelector(".btnsend");	// Button reserve
 let cancel = document.querySelector('.cancel');	  // Button to cancel
 let minuteresult = document.querySelector('.minuteresult'); // display the minutes left
 let mapContainer = document.querySelector('#map');
-let inputFirst = document.querySelector("#firstname");// disable input button if empty form 
-let inputSecond = document.querySelector("#name");// disable input button if empty form 
+let infoUser = document.querySelector('.infoUser'); // Here i put the 2 input to listen to any of them if one is empty then content hiden
 
 
-document.addEventListener('click', () => { // Hide canvas and button if empty
+/*document.addEventListener('click', (e) => { // Hide canvas and button if empty
 	if(inputFirst.value == '') { 
 		document.querySelector('canvas').style.display = 'none';
 		document.querySelector(".btnsend").style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
@@ -22,7 +21,20 @@ document.addEventListener('click', () => { // Hide canvas and button if empty
 		document.querySelector('.btnreset').style.display = 'none';
 		document.querySelector('.pensign').style.display = 'none';
 	}
+})*/
+infoUser.addEventListener('input', (e) => {
+	if(e.target.value == 0) {
+		document.querySelector(".btnsend").style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
+		document.querySelector('.pensign').style.display = 'none';
+		document.querySelector('canvas').style.display = 'none';
+		document.querySelector('.btnreset').style.display = 'none';
+	} else {	// Ici il n'y a pas de btnsend pour le faire apparaitre il faut signé la canvas
+		document.querySelector('.pensign').style.display = 'inline-block';// CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
+		document.querySelector('canvas').style.display = 'inline-block';
+		document.querySelector('.btnreset').style.display = 'inline-block';
+	}
 })
+
 
 // Create timer //
 btnsend.addEventListener('click', uptadeCountdown = (e) => {
