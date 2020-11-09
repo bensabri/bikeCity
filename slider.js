@@ -1,4 +1,3 @@
-// Slider //
 
 //Selection des boutton next, prev, et playpause
 document.querySelector('.next').addEventListener('click', nextImage)

@@ -73,7 +73,7 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					results.innerHTML = `${bike.name} : Attention reste peu de vélo: <p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
 					infoUser.style.display = "inline-block";
-					if(inputSecond.value && inputFirst.value) {
+					if(inputSecond.value && inputFirst.value) {	// If names load by default the canvas element wont appear only by click on marker if input filled !
 						hidenElement.style.display = "inline-block";
 					}
 					

@@ -12,16 +12,6 @@ let inputSecond = document.querySelector('#name');
 let hidenElement = document.querySelector('.hidenElement'); // contains canvas, pen, btnreset
 
 
-/*document.addEventListener('click', () => { // Hide canvas and button if empty
-	if(inputFirst.value == '') { 
-		hidenElement.style.display = 'none';  // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
-		btnsend.style.display = 'none';
-	} else if (inputSecond.value == '') {
-		hidenElement.style.display = 'none';  // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE/////////
-		btnsend.style.display = 'none';  // Ici il n'y a pas de btnsend pour le faire apparaitre il faut signé la canvas
-	}
-})*/
-
 infoUser.addEventListener('input', (e) => { 
 	if(e.target.value == 0) { 
 		hidenElement.style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
