@@ -374,6 +374,9 @@ formname {
 		margin: 35px;
 		left: 0;
 	}
+	.resasign {
+		height: 600px;
+	}
 	.section {
 		height: 1150px;
 		width: 95%;
@@ -488,9 +491,10 @@ formname {
 		font-size: 15px;
 		padding: 8px;
 	}
-	.villenantes {
-		font-size: 15px;
+	.resasign {
+		height: 650px;
 	}
+
 }
 @media screen and (max-width: 400px) {
 	.textIllustation {
