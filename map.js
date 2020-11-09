@@ -5,6 +5,8 @@ let infoUser = document.querySelector('.infoUser');
 let formname = document.querySelector('.formname');
 let resafinal = document.querySelector('.resafinal');
 let hidenElement = document.querySelector('.hidenElement');
+let inputFirst = document.querySelector('#firstname');
+let inputSecond = document.querySelector('#name');
 
 let map = L.map("map").setView([47.217, -1.550], 13);
 
@@ -58,7 +60,7 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					results.style.color = 'red';	
 					results.innerHTML = `Il n'y a plus de vélo disponible a la station :</br> ${bike.name}`;
 					infoUser.style.display = "none" ;  // get the div to hide or display
-					//hidenElement.style.display = "none";
+					hidenElement.style.display = "none";
 				})
 					
 				} else if (bike.available_bikes <= 5) {
@@ -71,7 +73,10 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					results.innerHTML = `${bike.name} : Attention reste peu de vélo: <p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
 					infoUser.style.display = "inline-block";
-					//hidenElement.style.display = "inline-block";
+					if(inputSecond.value && inputFirst.value) {
+						hidenElement.style.display = "inline-block";
+					}
+					
 	
 				})
 					 
@@ -85,8 +90,9 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					results.innerHTML =  `${bike.name}<p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
 					infoUser.style.display = "inline-block";
-					//hidenElement.style.display = "inline-block";
-					
+					if(inputSecond.value && inputFirst.value) {
+						hidenElement.style.display = "inline-block";
+					}
 				})
 				}
 				
