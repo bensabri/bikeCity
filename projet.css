@@ -181,12 +181,12 @@ a:hover {
 	transition: 0.5s all;
 }
 .results {
-	padding-left: 25px;
+	padding-left: 20px;
 	height: 100px;
 	font-size: 17px;
 }
 label {
-	padding: 10px;
+	padding: 20px;
 }
 
 #firstname {
@@ -263,7 +263,7 @@ label {
 .btnreset {
 	position: absolute;
 	bottom: 8px;
-	left: 115px;
+	left: 55px;
 	align-items: center;
 	height: 30px;
 	width: 70px;
@@ -302,11 +302,11 @@ label {
 
 canvas {
 	background-color: white;
+	border-radius: 7px;
 	position: absolute;
-	margin: 30;
 	bottom: 50px;
-	left: 50px;
-	border: 7px ridge #849596;
+	left: 20px;
+	box-shadow: darkgray 0 0 8px ;
 	width: 200px;
 	height: 115px;
 }
@@ -314,10 +314,6 @@ canvas {
 	display: none;
 }
 
-.resultapi {
-	height: 100px;
-	background-color: white;
-}
 .bikefinalresa {
 	font-size: 100px;
 	position: absolute;
@@ -465,7 +461,7 @@ formname {
 		bottom: 170px;
 	}
 	.btnreset {
-		left: 40%;
+		padding: 0;
 	}
 	.btnform {
 		right: 7%;
