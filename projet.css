@@ -320,25 +320,7 @@ canvas {
 	left: 50%;
 	top: 50%;
 }
-/*
-formname {
-	position: absolute;
-	right: 0;
-	bottom: 20px;
-	margin: 50px;
-	color: black;
-	background-color: white;
-	border: white solid 10px;
-	width: 500px;
-	height: 500px;
-}
-#map {
-	position: absolute;
-	bottom: 20px;
-	margin: 50px;
-	height: 500px;
-	width: 550px;
-}*/
+
 
 @media screen and (max-width: 1360px) {
 	#map {
@@ -478,7 +460,7 @@ formname {
 		width: 95%;
 	}
 	canvas {
-		left: 25%;
+		left: 20px;
 	}
 	.minuteresult {
 		bottom: 70px;
