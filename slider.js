@@ -2,7 +2,6 @@
 
 //Selection des boutton next, prev, et playpause
 document.querySelector('.next').addEventListener('click', nextImage)
-
 document.querySelector('.prew').addEventListener('click', prevImage)
 document.querySelector('.btnpause').addEventListener('click', playPause)
 

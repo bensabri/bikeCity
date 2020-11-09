@@ -1,11 +1,10 @@
 window.addEventListener("load", () => { // It display the map on load or refresh browser without the map will not appear
 //map
-let pensign = document.querySelector('.pensign');
 let results = document.querySelector(".results");
 let infoUser = document.querySelector('.infoUser');
 let formname = document.querySelector('.formname');
 let resafinal = document.querySelector('.resafinal');
-let reset = document.querySelector('.btnreset');
+let hidenElement = document.querySelector('.hidenElement');
 
 let map = L.map("map").setView([47.217, -1.550], 13);
 
@@ -52,7 +51,6 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 		
 				if(bike.available_bikes === 0 ) {  // hide all form content when 0 bike
 					let marker = L.marker([bike.position.lat ,bike.position.lng], {icon: redIcon}).addTo(map)
-					
 					marker.bindPopup(`<b>Address</b> ${bike.name}`).openPopup(); // show station name on the map	
 					marker.addEventListener('click', () => { // when i click on a marker i display the bike available on the div result
 					
@@ -60,10 +58,8 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					results.style.color = 'red';	
 					results.innerHTML = `Il n'y a plus de vélo disponible a la station :</br> ${bike.name}`;
 					infoUser.style.display = "none" ;  // get the div to hide or display
-					canvas.style.display = "none";
-					pensign.style.display = "none";
-					reset.style.display = "none";
-					})
+					hidenElement.style.display = "none";
+				})
 					
 				} else if (bike.available_bikes <= 5) {
 					let marker = L.marker([bike.position.lat ,bike.position.lng], {icon: orangeIcon}).addTo(map)
@@ -75,9 +71,7 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					results.innerHTML = `${bike.name} : Attention reste peu de vélo: <p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
 					infoUser.style.display = "inline-block";
-					//canvas.style.display = "inline-block";
-					pensign.style.display = "inline-block";
-					reset.style.display = "inline-block";
+					hidenElement.style.display = "inline-block";
 	
 				})
 					 
@@ -91,9 +85,7 @@ const url = "https://api.jcdecaux.com/vls/v1/stations?contract=nantes&apiKey=55d
 					results.innerHTML =  `${bike.name}<p>Nombre de places: ${bike.bike_stands} </p>Vélo disponible: ${bike.available_bikes}`;
 					resafinal.innerHTML =  `Vous avez reservé un velo a la station:  ${bike.name}`;
 					infoUser.style.display = "inline-block";
-					//canvas.style.display = "inline-block";
-					pensign.style.display = "inline-block";
-					reset.style.display = "inline-block";
+					hidenElement.style.display = "inline-block";
 					
 				})
 				}

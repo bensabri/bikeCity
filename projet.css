@@ -237,7 +237,6 @@ label {
 	color: black;
 }
 .btnreset {
-	display: none;
 	position: absolute;
 	bottom: 8px;
 	left: 115px;
@@ -278,7 +277,6 @@ label {
 }
 
 canvas {
-	display: none;
 	background-color: white;
 	position: absolute;
 	margin: 30;
@@ -287,6 +285,9 @@ canvas {
 	border: 1px dashed rgb(0, 0, 0);
 	width: 200px;
 	height: 115px;
+}
+.hidenElement {
+	display: none;
 }
 
 .resultapi {

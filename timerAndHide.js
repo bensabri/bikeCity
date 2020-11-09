@@ -9,33 +9,27 @@ let mapContainer = document.querySelector('#map');
 let infoUser = document.querySelector('.infoUser'); // Here i put the 2 input to listen to any of them if one is empty then content hiden
 let inputFirst = document.querySelector('#firstname');
 let inputSecond = document.querySelector('#name');
+let hidenElement = document.querySelector('.hidenElement'); // contains canvas, pen, btnreset
 
-document.addEventListener('click', (e) => { // Hide canvas and button if empty
+
+document.addEventListener('click', () => { // Hide canvas and button if empty
 	if(inputFirst.value == '') { 
-		document.querySelector('canvas').style.display = 'none';
-		document.querySelector(".btnsend").style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
-		document.querySelector('.btnreset').style.display = 'none';
-		document.querySelector('.pensign').style.display = 'none';
+		hidenElement.style.display = 'none';  // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
+		btnsend.style.display = 'none';
 	} else if (inputSecond.value == '') {
-		document.querySelector('canvas').style.display = 'none';
-		document.querySelector('.btnsend').style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE/////////
-		document.querySelector('.btnreset').style.display = 'none';
-		document.querySelector('.pensign').style.display = 'none';
-	}
-})
-infoUser.addEventListener('input', (e) => { 
-	if(e.target.value == 0) {
-		document.querySelector(".btnsend").style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
-		document.querySelector('.pensign').style.display = 'none';
-		document.querySelector('canvas').style.display = 'none';
-		document.querySelector('.btnreset').style.display = 'none';
-	} else {	// Ici il n'y a pas de btnsend pour le faire apparaitre il faut signé la canvas
-		document.querySelector('.pensign').style.display = 'inline-block';// CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
-		document.querySelector('canvas').style.display = 'inline-block';
-		document.querySelector('.btnreset').style.display = 'inline-block';
+		hidenElement.style.display = 'none';  // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE/////////
+		btnsend.style.display = 'none';  // Ici il n'y a pas de btnsend pour le faire apparaitre il faut signé la canvas
 	}
 })
 
+infoUser.addEventListener('input', (e) => { 
+	if(e.target.value == 0) { 
+		hidenElement.style.display = 'none'; // CETTE LIGNE EST UNE SECURITE ELLE FONT DISPARAITRE LE BOUTON SI L INPUT EST EFFACEE ////////
+		btnsend.style.display = 'none';
+	} else {	
+		hidenElement.style.display = 'inline-block';
+	}
+})
 
 // Create timer //
 btnsend.addEventListener('click', uptadeCountdown = (e) => {
