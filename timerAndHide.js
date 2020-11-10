@@ -47,7 +47,6 @@ function showMapTimer() { // Lorsque le minuteur arriver a 0 cette fonction réa
 }
 showMapTimer()
 
-	e.preventDefault()	// eventlistener show the resasign and hide the map when click on btnsend
 	resasign.style.display = "inline-block";
 	mapContainer.style.display = "none";
 })
