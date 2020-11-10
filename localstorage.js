@@ -4,6 +4,7 @@ let prenom = document.querySelector('#name');
 
 
 btnsend.addEventListener('click', () => { // Get the name from input and save it into the browser
+    console.log('test')
     localStorage.setItem('name',nom.value); //place les donnee dans le navigateur
 	localStorage.setItem('firstname',prenom.value);
 })
