@@ -1,10 +1,10 @@
 // Localstorage save information in the browser //
 let nom = document.querySelector('#firstname');
 let prenom = document.querySelector('#name');
-let mapContainer = document.querySelector('#map');
-let resasign = document.querySelector(".resasign");
+
 
 btnsend.addEventListener('click', () => { // Get the name from input and save it into the browser
+    console.log('test')
     localStorage.setItem('name',nom.value); //place les donnee dans le navigateur
 	localStorage.setItem('firstname',prenom.value);
 })
@@ -22,5 +22,4 @@ cancel.addEventListener('click', () => { // Remove timeLeft and bike, keep name 
     mapContainer.style.display = "inline-block";  // when i close the resasign and show the map back when i cancel the resa by click on cancel button
     resasign.style.display = "none";
 })
-
 
