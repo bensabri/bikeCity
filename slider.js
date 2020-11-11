@@ -36,7 +36,7 @@ document.querySelector('body').addEventListener('keydown', (e) => { // switch ri
     }
 })
 
-// create play auto every  </i> <i class="btnpause fas fa-pause"></i>  5 secondes
+// create play auto every 5 secondes
 
 let playing = true;
 let btnpause = document.querySelector('.btnpause');

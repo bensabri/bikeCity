@@ -48,17 +48,21 @@ li {
 	position: absolute;
 	right: 0;
 	font-weight: 700;
-	font-size: 30px;
-	padding: 80px 50px;
+	font-size: 23px;
+	padding: 62px 50px;
 	color: white;
 	transition: 1s all;
 }
 .citybike {
 	color: rgb(22, 108, 189);
+	position: absolute;
+	right: 484px;
+	top: 30px;
+	transition: 1s all;
 }
 .btnillustration {
 	position: absolute;
-	top: 175px;
+	top: 150px;
 	right: 470px;
 	border: none;
 	border-radius: 7px;
@@ -382,19 +386,22 @@ canvas {
 		right: 20px;
 		bottom: 30px;
 	}
+	.citybike {
+		left: 97px;
+	}
 
 	.textIllustation {
 		margin: 0;
 		padding: 0;
 		position: absolute;
-		left: 30px;
-		top: 20px;
-		font-size: 23px;
+		left: 100px;
+		top: 70px;
+		font-size: 18px;
 		width: 450px;
 	}
 	.btnillustration {
-		left: 30px;
-		top: 100px;
+		left: 100px;
+		top: 130px;
 		height: 40px;
 		width: 130px;
 	}
@@ -414,7 +421,7 @@ canvas {
 
 	.textIllustation {
 		width: auto;
-		font-size: 19px;
+		font-size: 17px;
 		width: 390px
 	}
 
@@ -487,5 +494,8 @@ canvas {
 	.textIllustation {
 		width: auto;
 		font-size: 15px;
+	}
+	.btnillustration {
+		display: none;
 	}
 }
