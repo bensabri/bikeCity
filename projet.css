@@ -93,7 +93,7 @@ li {
 	cursor: pointer;
 }
 #button:hover {
-	color: coral;
+	color: grey;
 }
 
 .next {
@@ -111,13 +111,18 @@ li {
 	right: 50%;
 	bottom: 2%;
 	color: white;
-	font-size: 20px;
+	background-color: rgba(222, 184, 135, 0);
+	border: none;
+	outline: none;
+	font-size: 30px;
+	width: 40px;
 	cursor: pointer;
 }
 .btnpause:hover {
-	color: coral;
+	color: grey;
 }
 
+	
 .title {
 	text-align: center;
 	padding: 20px;
@@ -251,6 +256,10 @@ label {
 	color: black;
 	border-radius: 5px;
 	box-shadow: white 1px 1px 5px;
+	cursor: pointer;
+}
+.cancel:hover {
+	color: white;
 }
 .pensign {
 	font-size: 50px;

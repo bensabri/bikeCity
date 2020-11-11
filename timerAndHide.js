@@ -28,8 +28,9 @@ btnsend.addEventListener('click', uptadeCountdown = (e) => {
 	time--;
 	seconds = seconds < 10 ? `0${seconds}` : seconds; // si les seconde sont inferier a 10 on affiche un zéro avant seconde.
 	minuteresult.innerHTML = `Il vous reste ${minutes} : ${seconds} pour récupère votre vélo</br>`;
-	let interval = setTimeout(uptadeCountdown, 1000) // arret du muniteur quand click sur annuler
+	
 	localStorage.setItem('timeLeft', `Il vous reste ${minutes} : ${seconds} pour récupère votre vélo</br>`);
+	let interval = setTimeout(uptadeCountdown, 1000) // arret du muniteur quand click sur annuler
 
 cancel.addEventListener('click', () => {
 	clearTimeout(interval)
@@ -39,7 +40,6 @@ cancel.addEventListener('click', () => {
 })  
 
 function showMapTimer() { // Lorsque le minuteur arriver a 0 cette fonction réaffiche la map
-	let mapContainer = document.querySelector('#map');
 	if(time == 0) {
 	mapContainer.style.display = 'inline-block';
 	resasign.style.display = 'none';	
@@ -47,6 +47,4 @@ function showMapTimer() { // Lorsque le minuteur arriver a 0 cette fonction réa
 }
 showMapTimer()
 
-	resasign.style.display = "inline-block";
-	mapContainer.style.display = "none";
 })

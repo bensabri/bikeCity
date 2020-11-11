@@ -2,7 +2,7 @@
 //Selection des boutton next, prev, et playpause
 document.querySelector('.next').addEventListener('click', nextImage)
 document.querySelector('.prew').addEventListener('click', prevImage)
-document.querySelector('.btnpause').addEventListener('click', playPause)
+//document.querySelector('.btnpause').addEventListener('click', playPause)
 
 //Selection de la box qui contient l'img src qui contient les images
 let sliderContainer = document.querySelector('.box');
@@ -35,14 +35,34 @@ document.querySelector('body').addEventListener('keydown', (e) => { // switch ri
         prevImage()
     }
 })
-// create play auto every 5 secondes
+
+// create play auto every  </i> <i class="btnpause fas fa-pause"></i>  5 secondes
+
+let playing = true;
+let btnpause = document.querySelector('.btnpause');
+let btnplay = document.querySelector('.btnplay')
 let timer = setInterval(nextImage, 5000);
 
-function playPause() {
-    if(timer) {
-       clearInterval(timer)
-       timer = null; 
-    } else {
-        setInterval(nextImage, 5000)
-    }
+function pauseSlide() {
+    btnpause.innerHTML = '⏵';
+    playing = false;
+    clearInterval(timer);
 }
+
+function playSlide() {
+    btnpause.innerHTML = '⏸';
+    playing = true;
+    timer = setInterval(nextImage, 5000);
+}
+
+btnpause.addEventListener('click', () => {
+    if(playing) {
+        pauseSlide();
+        console.log('pause');
+    } else {
+        playSlide();
+        console.log('play');
+    }
+}) 
+
+
